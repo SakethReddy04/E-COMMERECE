@@ -1,0 +1,34 @@
+# Byte-compiled / cache
+_pycache_/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.env
+.venv/
+env/
+venv/
+ENV/
+
+.ipynb_checkpoints
+
+.vscode/
+.idea/
+
+.DS_Store
+
+*.log
+
+*.egg-info/
+.eggs/
+*.egg
+
+
+node_modules/
+dist/
+build/
+
+
+Thumbs.db
+Desktop.ini
