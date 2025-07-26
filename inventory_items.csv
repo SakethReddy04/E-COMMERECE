@@ -1,0 +1,5 @@
+id,product id,created_at,sold_at,cost,product_category,product name,product brand,product retail price,product department,product sku,product distribution center_id
+1,101,2024-01-01 10:00:00,2024-01-10 12:00:00,200,Shirts,Classic T-Shirt,Nike,399,Men,CL-T101,1
+2,101,2024-01-05 11:00:00,,200,Shirts,Classic T-Shirt,Nike,399,Men,CL-T101,1
+3,102,2024-01-10 13:00:00,2024-01-15 15:00:00,250,Jeans,Slim Fit Jeans,Levis,999,Men,JE-L201,2
+4,103,2024-01-11 14:00:00,,150,T-Shirts,Cool T-Shirt,Puma,299,Men,TS-P301,2

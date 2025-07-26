@@ -1,0 +1,4 @@
+id,order_id,user_id,product id,inventory_item_id,status,created_at,shipped_at,delivered_at,returned_at
+1,1001,1,101,1,delivered,2024-01-09,2024-01-10,2024-01-13,
+2,1001,1,102,3,delivered,2024-01-09,2024-01-10,2024-01-13,
+3,1002,2,103,4,shipped,2024-01-12,2024-01-13,,

@@ -1,0 +1,4 @@
+id,cost,category,name,brand,retail price,department,sku,distribution center id
+101,200,Shirts,Classic T-Shirt,Nike,399,Men,CL-T101,1
+102,250,Jeans,Slim Fit Jeans,Levis,999,Men,JE-L201,2
+103,150,T-Shirts,Cool T-Shirt,Puma,299,Men,TS-P301,2

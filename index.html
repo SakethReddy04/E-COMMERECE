@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E-commerce Chatbot</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h2 {
+            color: #333;
+        }
+        #chat-container {
+            width: 100%;
+            max-width: 600px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-top: 12px;
+            font-size: 16px;
+        }
+        button {
+            margin-top: 12px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #response {
+            margin-top: 20px;
+            background-color: #f1f3f5;
+            padding: 15px;
+            border-radius: 6px;
+            color: #212529;
+            white-space: pre-wrap;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="chat-container">
+        <h2>🛍️ E-commerce Chatbot</h2>
+        <input type="text" id="userInput" placeholder="E.g. Show me status of order 1001">
+        <button onclick="sendQuery()">Ask</button>
+        <div id="response"></div>
+    </div>
+
+    <script>
+        async function sendQuery() {
+            const query = document.getElementById("userInput").value;
+            const responseDiv = document.getElementById("response");
+            responseDiv.textContent = "⏳ Thinking...";
+
+            try {
+                const res = await fetch("http://localhost:5000/chatbot", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ query })
+                });
+                const data = await res.json();
+                responseDiv.textContent = data.response;
+            } catch (error) {
+                responseDiv.textContent = "⚠️ Error: Could not connect to the server.";
+                console.error(error);
+            }
+        }
+    </script>
+
+</body>
+</html>
